@@ -26,3 +26,4 @@ def post_v1_account():
         headers=headers,
         json=payload
     )
+    return response
