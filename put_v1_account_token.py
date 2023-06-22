@@ -9,7 +9,6 @@ def put_v1_account_token():
     token = "12345"
     url = f"http://localhost:5051/v1/account/{token}"
 
-    payload = {}
     headers = {
         'X-Dm-Auth-Token': 'aliquip cupidatat',
         'X-Dm-Bb-Render-Mode': 'aliquip cupidatat',
@@ -19,8 +18,7 @@ def put_v1_account_token():
     response = requests.request(
         method="PUT",
         url=url,
-        headers=headers,
-        json=payload
+        headers=headers
     )
 
     print(response.text)

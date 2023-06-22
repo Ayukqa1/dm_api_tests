@@ -8,7 +8,6 @@ def get_v1_account():
     """
     url = "http://localhost:5051/v1/account"
 
-    payload = {}
     headers = {
         'X-Dm-Auth-Token': 'aliquip cupidatat',
         'X-Dm-Bb-Render-Mode': 'aliquip cupidatat',
@@ -18,8 +17,7 @@ def get_v1_account():
     response = requests.request(
         method="GET",
         url=url,
-        headers=headers,
-        json=payload
+        headers=headers
     )
 
     print(response.text)
